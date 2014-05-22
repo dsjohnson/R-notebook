@@ -1,0 +1,30 @@
+---
+output: html_document
+---
+# R Notebook
+
+Random thoughts and tib-bits for use in other projects
+
+## Half-Cauchy prior in MCMC
+
+### Model (Normals are specified with precision)
+
+$\mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \sigma_1 \mathbf{K}_1 \boldsymbol{\alpha}_1 + \dots + \sigma_q \mathbf{K}_q \boldsymbol{\alpha}_q + \boldsymbol{\epsilon}$
+
+$[\boldsymbol{\epsilon}_j] = N(\mathbf{0},\tau_\epsilon\mathbf{I})$
+
+$[\boldsymbol{\alpha}_j] = N(\mathbf{0},\tau_j\mathbf{Q}_j)$
+
+### Prior distributions
+
+$[\boldsymbol{\beta}] = N(\mathbf{0},\mathbf{Q}_\beta)$
+
+$[\sigma_j] = N(0,A)$
+
+$[\tau_\epsilon] = \Gamma(a,b)$
+
+$[\tau_j]=\Gamma(1/2,1/2)$
+
+
+
+### Conditional distributions for Gibbs sampler 
